@@ -1,4 +1,4 @@
-export interface Pessoa {
+export interface Paciente {
   _id: string;
   nome: string;
   idade: number;

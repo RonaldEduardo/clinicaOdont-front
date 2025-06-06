@@ -1,20 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { AppMaterialModule } from '../shared/app-material/app-material.module';
 
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { SharedModule } from '../shared/shared.module';
 import { CadastroRoutingModule } from './cadastro-routing.module';
-import { PessoaComponent } from './pessoa/pessoa.component';
+import { PacienteComponent } from './paciente/paciente.component';
 
 
 
 @NgModule({
   declarations: [
-    PessoaComponent
+    PacienteComponent
   ],
   imports: [
     CommonModule,
     CadastroRoutingModule,
-    AppMaterialModule
+    AppMaterialModule,
+    SharedModule
   ]
 })
 export class CadastroModule { }
