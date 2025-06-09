@@ -1,0 +1,19 @@
+[form-card]{
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+[limit-width] {
+  width: 60%;
+}
+
+[form-paciente] {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

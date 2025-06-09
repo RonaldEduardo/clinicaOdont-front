@@ -1,15 +1,17 @@
-table
-{
+table {
   width: 100%;
   border-collapse: collapse;
-
 }
 
-.loading-spinner
-{
+.loading-spinner {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
   background-color: rgba(210, 210, 210, 0.46);
+}
+
+[add-button] {
+  border: 1px solid black;
+  border-radius: 50%;
 }

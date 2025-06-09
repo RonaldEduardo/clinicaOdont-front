@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { Component, Inject, OnInit } from '@angular/core';
 import { Paciente } from './models/paciente';
 import { CadastroService } from '../service/CadastroService.service';
@@ -13,12 +14,13 @@ import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/err
 export class PacienteComponent implements OnInit {
   pacientes$!: Observable<Paciente[]>;
 
-
-  displayedColumns = ['id', 'nome', 'documento'];
+  displayedColumns = ['id', 'nome', 'documento', 'ativo', 'actions'];
 
   constructor(
     private cadastroService: CadastroService,
-    public dialog: MatDialog
+    public dialog: MatDialog,
+    private router: Router,
+    private route: ActivatedRoute
   ) {}
 
   onError(errorMensage: string): void {
@@ -35,5 +37,9 @@ export class PacienteComponent implements OnInit {
           return of([])
         })
       );
+  }
+
+  onAdd(): void {
+    this.router.navigate(['create'], { relativeTo: this.route });
   }
 }

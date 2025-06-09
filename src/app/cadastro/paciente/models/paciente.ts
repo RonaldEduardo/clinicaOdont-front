@@ -1,5 +1,6 @@
 export interface Paciente {
-  _id: string;
-  nome: string;
-  idade: number;
+  id: string;
+  nomeCompleto: string;
+  documento: string;
+  ativo: boolean;
 }

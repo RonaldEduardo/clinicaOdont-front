@@ -1,0 +1,31 @@
+<mat-card form-card>
+  <mat-toolbar color="primary">
+    <mat-card-title>Cadastro de Pacientes</mat-card-title>
+  </mat-toolbar>
+  <form [formGroup]="form" form-paciente>
+    <mat-form-field limit-width>
+      <input
+        matInput
+        placeholder="Nome Completo"
+        name="nomeCompleto"
+        required
+        formControlName="nomeCompleto"
+      />
+    </mat-form-field>
+
+    <mat-form-field limit-width>
+      <input
+        matInput
+        placeholder="Documento"
+        name="documento"
+        required
+        formControlName="documento"
+      />
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button color="primary">Salvar</button>
+      <button mat-raised-button>Cancelar</button>
+    </mat-card-actions>
+  </form>
+</mat-card>
